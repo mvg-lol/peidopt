@@ -28,12 +28,30 @@
         <meta name="twitter:image" content="https://peido.pt/favicon.png" />
         <style>
             html, body {
-                margin: 0;
                 height: 100%;
             }
         </style>
+        <link href="fakerecaptcha.css" rel="stylesheet">
     </head>
-    <body onmousemove="addAudio()">
-        <script src="index.js" type="text/javascript"></script>   
+    <body style="align-content: center;">
+        <script src="index.js" type="text/javascript"></script>
+        <audio id="audio" loop>
+            <source src="wetfart.mp3" type="application/ogg">
+        </audio> 
+        <div class="fkrc-container fkrc-m-p" onclick="addAudio()">
+            <!-- Captcha checkbox widget -->
+            <div id="fkrc-checkbox-window" class="fkrc-checkbox-window fkrc-m-p fkrc-block" >
+                <div class="fkrc-checkbox-container fkrc-m-p" >
+                    <button type="button" style="cursor: pointer;" id="fkrc-checkbox" class="fkrc-checkbox fkrc-m-p fkrc-line-normal"></button>
+                </div>
+                <p class="fkrc-im-not-a-robot fkrc-m-p fkrc-line-normal">I'm not a robot</p>
+                <img src="RecaptchaLogo.svg" class="fkrc-captcha-logo fkrc-line-normal" alt="">
+                <p href="" class="fkrc-checkbox-desc fkrc-m-p fkrc-line-normal"><a href="peido.html">Privacy - Terms</a></p>
+                <img src="RecaptchaLogo.svg" class="fkrc-spinner fkrc-m-p fkrc-line-normal" alt="" id="fkrc-spinner">
+            </div>
+            <!-- Captcha checkbox verification window -->
+           
+            <img src="RecaptchaLogo.svg" alt="" class="fkrc-verifywin-window-arrow" id="fkrc-verifywin-window-arrow"/>
+        </div>
     </body>
 </html>
